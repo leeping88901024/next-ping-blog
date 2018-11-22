@@ -1,0 +1,29 @@
+@import "../../styles/colors.scss"; // Colors
+.fadeIn {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeIn;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+.layout {
+  // Pixiv background style
+  background-color: $bg;
+  p {
+    // @extend %han-mono;
+  }
+
+  img {
+    max-height: 20em;
+    max-width: 100%;
+    cursor: zoom-in;
+  }
+}
