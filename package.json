@@ -1,0 +1,11 @@
+{
+  "name": "next-ping-blog",
+  "version": "1.0.0",
+  "description": "ping's blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lee ping",
+  "license": "ISC"
+}
