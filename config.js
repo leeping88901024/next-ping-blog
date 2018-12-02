@@ -53,6 +53,10 @@ module.exports = {
     {
       href: '/test/',
       title: '留言'
+    },
+    {
+      href: '/a/',
+      title: '测试Bug1'
     }
   ],
   redirectors: [

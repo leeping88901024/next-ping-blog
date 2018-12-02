@@ -4,7 +4,7 @@ var cookieParser = require('cookie-parser')
 var logger = require('morgan')
 var bodyParser = require('body-parser')
 
-process.env.NODE_ENV = 'production'
+// process.env.NODE_ENV = 'production'
 var port = parseInt(process.env.PORT, 10) || 80
 var dev = process.env.NODE_ENV !== 'production'
 var app = next({ dev })
