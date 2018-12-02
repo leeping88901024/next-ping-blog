@@ -1,11 +1,13 @@
 import React from 'react'
+import Router from 'next/router'
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import NavItem from './NavItem/'
 import './index.scss'
-import config from '../../config'
+import { navbarList, gitRepository } from '../../config'
 
-const { navbarList } = config;
+import GithubCorner from '../GithubCorner'
 
 const NavbarClass = [
   'navbar',
@@ -17,15 +19,20 @@ const NavbarClass = [
 const Navbar = () => (
   <nav id="m-navbar" className={`${NavbarClass.join(' ')} navbar-night`}>
     <div className="container">
-      <button
-        type="button"
-        className="navbar-brand btn btn-default"
-        onClick={() => {
-        }}
-      >
-        <span className="brand-logo">Ping</span>
-        &apos;s Blog
-      </button>
+      <Link href='/'>
+        <a>
+          <button
+            type="button"
+            className="navbar-brand btn btn-default"
+            onClick={() => {
+              // Router.push('/')
+            }}
+          >
+            <span className="brand-logo">Ping</span>
+            &apos;s Blog
+          </button>
+        </a>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -34,6 +41,7 @@ const Navbar = () => (
       >
         <FontAwesomeIcon icon={faBars} />
       </button>
+      <GithubCorner url={gitRepository} />
       <div
         className="collapse navbar-collapse flex-row-reverse"
         id="navbarSupportedContent"

@@ -1,28 +1,31 @@
-const express = require('express')
-const next = require('next')
+var express = require('express')
+var next = require('next')
+var cookieParser = require('cookie-parser')
+var logger = require('morgan')
+var bodyParser = require('body-parser')
 
-// process.env.NODE_ENV = 'production'
-const port = parseInt(process.env.PORT, 10) || 3000
-const dev = process.env.NODE_ENV !== 'production'
-const app = next({ dev })
-const handle = app.getRequestHandler()
+process.env.NODE_ENV = 'production'
+var port = parseInt(process.env.PORT, 10) || 80
+var dev = process.env.NODE_ENV !== 'production'
+var app = next({ dev })
+var handle = app.getRequestHandler()
+
+// routers
+var blogRouter = require('./routes/blog')
 
 app.prepare()
   .then(() => {
-    const server = express()
+    var server = express()
 
-    /* server.get('/a', (req, res) => {
-      return app.render(req, res, '/b', req.query)
-    })
+    // middleware
+    server.use(logger('dev'))
+    server.use(bodyParser.json({ limit: '100mb', extended: true }))
+    server.use(bodyParser.urlencoded({ limit: '100mb', extended: true }))
+    server.use(cookieParser())
+  
+    server.use('/blog', blogRouter)
 
-    server.get('/b', (req, res) => {
-      return app.render(req, res, '/a', req.query)
-    })
-
-    server.get('/posts/:id', (req, res) => {
-      return app.render(req, res, '/posts', { id: req.params.id })
-    }) */
-
+    // handle resource
     server.get('*', (req, res) => {
       return handle(req, res)
     })

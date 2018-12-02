@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ExternalLink from '../ExternalLink';
-import config from '../../config';
+import { title } from '../../config';
 
 import './index.scss';
 
@@ -12,14 +12,14 @@ const Footer = () => (
         <div className="col-sm-12 text-center">
           <p className="architecture">
             Build with&nbsp;
-            <ExternalLink href="https://www.gatsbyjs.org/" title="GatsbyJS" />
+            <ExternalLink href="https://nextjs.org//" title="Next" />
             &nbsp;and&nbsp;
             <ExternalLink
               href="https://reactjs.org/"
               title={`React ${React.version}`}
             />
             .&nbsp;Hosted on&nbsp;
-            <ExternalLink href="https://www.netlify.com/" title="Netlify" />
+            <ExternalLink href="https://www.aliyun.com/" title="Aliyun" />
             <br />
             The code is reference on &nbsp;
             <ExternalLink
@@ -29,9 +29,9 @@ const Footer = () => (
           </p>
           <p className="copyright">
             Copyright&nbsp;
-            <ExternalLink href="https://calpa.me/" title="&copy;Lee" />
+            <ExternalLink href="http://www.macdull.top" title="&copy;Lee" />
             &nbsp;
-            {config.title}
+            {title}
             {new Date().getFullYear()}
             &nbsp;Theme by Lee Ping
           </p>

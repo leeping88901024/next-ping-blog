@@ -7,14 +7,7 @@ import Information from './Information'
 
 import './index.scss';
 
-var config = {
-  wordings: ['简单的自我简绍'],
-  zhihuUsername: 'li-ping-60-30',
-  githubUsername: 'leeping88901024',
-  email: 'leeping88901024@gmail.com',
-  iconUrl: 'https://avatars0.githubusercontent.com/u/33998600?s=400&u=fa92489bd1f38b715bdda627338e5752c9b389aa&v=4',
-  about: '/2018/05/01/about-calpa-liu/',
-}
+import config from '../../config'
 
 const {
   wordings,

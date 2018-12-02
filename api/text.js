@@ -34,7 +34,7 @@ const extractId = (text = '') => {
   return id;
 };
 
-const getContent = async (mdFile) => {
+const getContent = (mdFile) => {
   const toc = [];
   const md = new Remarkable({
     highlight(str, lang) {
@@ -80,7 +80,7 @@ const getFirstParagraph = (content) => {
   return introduction[1].substring(0, 140);
 };
 
-module.exports = {
+export {
   getContent,
   getFirstParagraph,
 };

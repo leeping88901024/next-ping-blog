@@ -2,15 +2,14 @@ import React from 'react';
 
 import ExternalLink from '../../ExternalLink';
 
-import config from '../../../config';
+import { friends } from '../../../config';
 
 import './index.scss';
 
-const { friends } = config;
 
 const Friend = () => (
   <div className="friend">
-    <p>友情鏈接</p>
+    <p>友情链接</p>
     {friends.map(friend => (
       <ExternalLink
         href={friend.href}

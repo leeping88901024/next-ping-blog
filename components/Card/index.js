@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 
 import Tag from '../Tag';
 
+// api
 import { parseImgur } from '../../api/images';
 
+// styles
 import './index.scss';
 
-import { parseUrl } from '../../api/url';
-
 const imageStyle = (headerImage, color) => ({
-  backgroundColor: `#${color}`,
+  backgroundColor: `${color}`,
   backgroundImage: ` url(${parseImgur(headerImage, 'large')})`,
 });
 
@@ -30,15 +30,16 @@ const Card = ({
   content,
   tags,
 }) => {
-  const postUrl = parseUrl(date, url);
+  // const postUrl = parseUrl(date, url);
   const finalTags = tags.split(', ');
-
+  // const contentHtml = <div>{`${content}`}</div>
+  const newUrl = `/blog?url=${url}`
   return (
     <div className="col-sm-12 pb-4">
       <div className="custom-card">
         {headerImage && (
           <CardHeader
-            url={postUrl}
+            url={newUrl}
             image={headerImage}
             backgroundColor={headerBackgroundColor}
           />
@@ -49,11 +50,11 @@ const Card = ({
               <span className="date">{date}</span>
               {finalTags.map(tag => <Tag name={tag} key={tag} />)}
             </div>
-            <Link href={postUrl}>
+            <Link href={newUrl}>
               <a><h4 className="title">{title}</h4></a>
             </Link>
-            <p className="d-none d-md-block">{content}</p>
-            <Link href={postUrl}>
+            <div className="d-none d-md-block">{content}</div>
+            <Link href={newUrl}>
               <a>....继续阅读全文內容</a>
             </Link>
           </div>
@@ -68,7 +69,7 @@ Card.propTypes = {
   url: PropTypes.string.isRequired,
   headerImage: PropTypes.string,
   headerBackgroundColor: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
+  // content: PropTypes.string.isRequired,
   tags: PropTypes.string,
 };
 
