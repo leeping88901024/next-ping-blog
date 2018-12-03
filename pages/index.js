@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import fetch from 'isomorphic-unfetch'
 import chunk from 'lodash'
 import { Pagination } from 'antd'
+import axios from 'axios'
 
 import Layout from '../components/Layout'
 import Header from '../components/Header'
@@ -27,16 +28,17 @@ class Blog extends Component {
         }
     }
     static async getInitialProps({ req }) {
-        const postRes = await fetch(`${process.env.BACKEND_URL}/blog/blogs`, {
+        /* const postRes = await fetch(`${process.env.BACKEND_URL}/blog/blogs`, {
             method: 'get' ,
             mode: 'no-cors',
             headers: {
                 accept: 'application/json'
             }
-        })
-        const postJson = await postRes.json()
+        }) */
+        const postRes = await axios.get(`${process.env.BACKEND_URL}/blog/blogs`)
+        const { data } = postRes
 
-        return { postData: postJson }
+        return { postData: data }
     }
 
     onShowSizeChange = (current, pageSize) => {

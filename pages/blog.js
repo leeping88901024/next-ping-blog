@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import fetch from 'isomorphic-unfetch'
+import axios from 'axios'
 
 import TableOfContent from '../components/TableOfContent'
 import Layout from '../components/Layout'
@@ -27,7 +28,7 @@ const { name, gitRepository, gitHome, iconUrl, jueJinPostLink, jueJinLikeIconLin
 class BlogPost extends Component {
     static async getInitialProps({req, query}) {
         // blog content
-        const blogRes = await fetch(`${process.env.BACKEND_URL}/blog/blog?_id=${query.url}`, {
+        /* const blogRes = await fetch(`${process.env.BACKEND_URL}/blog/blog?_id=${query.url}`, {
             method: 'grt',
             mode: 'no-cors',
             headers: {
@@ -43,9 +44,14 @@ class BlogPost extends Component {
                 accept: 'application/json'
             }
         })
-        const postJson = await postRes.json()
+        const postJson = await postRes.json() */
+        const blogRes = await axios.get(`${process.env.BACKEND_URL}/blog/blog?_id=${query.url}`)
+        const { data: blogData } = blogRes
 
-        return { blog: blogJson, postData: postJson}
+        const postRes = await axios.get(`${process.env.BACKEND_URL}/blog/blogs`)
+        const { data: postData } = postRes
+
+        return { blog: blogData, postData: postData}
     }
     
     render() {
