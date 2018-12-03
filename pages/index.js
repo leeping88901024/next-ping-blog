@@ -29,6 +29,7 @@ class Blog extends Component {
     static async getInitialProps({ req }) {
         const postRes = await fetch(`${process.env.BACKEND_URL}/blog/blogs`, {
             method: 'get' ,
+            mode: 'no-cors',
             headers: {
                 accept: 'application/json'
             }

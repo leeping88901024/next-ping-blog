@@ -27,11 +27,18 @@ const { name, gitRepository, gitHome, iconUrl, jueJinPostLink, jueJinLikeIconLin
 class BlogPost extends Component {
     static async getInitialProps({req, query}) {
         // blog content
-        const blogRes = await fetch(`${process.env.BACKEND_URL}/blog/blog?_id=${query.url}`)
+        const blogRes = await fetch(`${process.env.BACKEND_URL}/blog/blog?_id=${query.url}`, {
+            method: 'grt',
+            mode: 'no-cors',
+            headers: {
+                accept: 'application/json'
+            }
+        })
         const blogJson = await blogRes.json()
         // siderbar
         const postRes = await fetch(`${process.env.BACKEND_URL}/blog/blogs`, {
             method: 'get' ,
+            mode: 'no-cors',
             headers: {
                 accept: 'application/json'
             }
