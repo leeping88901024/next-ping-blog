@@ -15,7 +15,7 @@ router.get('/blogs',(req,res) => {
                 console.log(err)
                 return
             }
-            console.log(docs.length)
+            console.log(`博文数量: ${docs.length}`)
             res.send(docs)
         })
     })
