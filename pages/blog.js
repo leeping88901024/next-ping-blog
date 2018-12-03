@@ -30,10 +30,12 @@ const bgWhite = { padding: '10px 15px', background: 'white' }
 const { name, gitRepository, gitHome, iconUrl, jueJinPostLink, jueJinLikeIconLink, gitalk } = config
 
 const title = '这是标题'
+var _id = ''
 
 // componnet
 class BlogPost extends Component {
     static async getInitialProps({req, query}) {
+        _id = query.url
         // blog content
         // ${process.env.BACKEND_URL}
         const blogRes = await axios.get(`/blog/blog?_id=${query.url}`)
@@ -42,16 +44,19 @@ class BlogPost extends Component {
         const postRes = await axios.get(`/blog/blogs`)
         const postData = postRes.data
 
-        return { blog: blogData, postData: postData}
+        return { blog: blogData, postData: postData }
     }
 
     componentDidMount() {
+        // 假如这里能取到 _id
+        // const _id2 = this.props._id
         const GitTalkInstance = new Gitalk({
             ...gitalk,
             title: title,
-            id: location.pathname,
+            id: `${location.pathname}-${_id}`,
         });
         GitTalkInstance.render('gitalk-container')
+        // console.log(`the current _id is ${_id}`)
     }
     
     render() {
