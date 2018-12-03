@@ -10,6 +10,10 @@ import ShareBox from '../components/ShareBox'
 import Content from '../components/Content'
 import ExternalLink from '../components/ExternalLink'
 
+// comments component
+const isBrowser = typeof window !== 'undefined'
+const Gitalk = isBrowser ? require('gitalk') : undefined
+
 // api
 import { parseChineseDate } from '../api/date'
 // import { parseMark } from '../api/parseMarkdown' // 这里不采用这种解析方式 - 不支持中文
@@ -20,9 +24,12 @@ import config from '../config'
 
 // Styles
 import '../styles/blog-post.scss'
+import 'gitalk/dist/gitalk.css'
 const bgWhite = { padding: '10px 15px', background: 'white' }
 
-const { name, gitRepository, gitHome, iconUrl, jueJinPostLink, jueJinLikeIconLink } = config
+const { name, gitRepository, gitHome, iconUrl, jueJinPostLink, jueJinLikeIconLink, gitalk } = config
+
+const title = '这是标题'
 
 // componnet
 class BlogPost extends Component {
@@ -52,6 +59,15 @@ class BlogPost extends Component {
         const postData = postRes.data
 
         return { blog: blogData, postData: postData}
+    }
+
+    componentDidMount() {
+        const GitTalkInstance = new Gitalk({
+            ...gitalk,
+            title: title,
+            id: location.pathname,
+        });
+        GitTalkInstance.render('gitalk-container')
     }
     
     render() {
@@ -105,6 +121,7 @@ class BlogPost extends Component {
                     </div>
                     <ShareBox url='' />
                     <TableOfContent toc={toc}  />
+                    {/** gitalk component */}
                     <div id="gitalk-container" className="col-sm-8 col-12 order-12" />
                 </div>
             </Layout>

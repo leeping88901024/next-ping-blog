@@ -66,11 +66,11 @@ module.exports = {
     },
   ],
   gitalk: {
-    clientID: '18255f031b5e11edd98a',
-    clientSecret: '2ff6331da9e53f9a91bcc991d38d550c85026714',
-    repo: 'calpa.github.io',
-    owner: 'calpa',
-    admin: ['calpa'],
+    clientID: '106ab12fa69d9f235e1f',
+    clientSecret: 'a1eda91e5225817427aab929917f87657b2192eb',
+    repo: 'next-ping-blog',
+    owner: 'leeping88901024',
+    admin: ['leeping88901024'],
     distractionFreeMode: true,
   },
   stats: {
