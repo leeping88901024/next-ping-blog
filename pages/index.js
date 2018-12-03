@@ -28,14 +28,8 @@ class Blog extends Component {
         }
     }
     static async getInitialProps({ req }) {
-        /* const postRes = await fetch(`${process.env.BACKEND_URL}/blog/blogs`, {
-            method: 'get' ,
-            mode: 'no-cors',
-            headers: {
-                accept: 'application/json'
-            }
-        }) */
-        const postRes = await axios.get(`${process.env.BACKEND_URL}/blog/blogs`)
+        // ${process.env.BACKEND_URL}
+        const postRes = await axios.get(`/blog/blogs`)
         const { data } = postRes
 
         return { postData: data }

@@ -35,27 +35,11 @@ const title = '这是标题'
 class BlogPost extends Component {
     static async getInitialProps({req, query}) {
         // blog content
-        /* const blogRes = await fetch(`${process.env.BACKEND_URL}/blog/blog?_id=${query.url}`, {
-            method: 'grt',
-            mode: 'no-cors',
-            headers: {
-                accept: 'application/json'
-            }
-        })
-        const blogJson = await blogRes.json()
-        // siderbar
-        const postRes = await fetch(`${process.env.BACKEND_URL}/blog/blogs`, {
-            method: 'get' ,
-            mode: 'no-cors',
-            headers: {
-                accept: 'application/json'
-            }
-        })
-        const postJson = await postRes.json() */
-        const blogRes = await axios.get(`${process.env.BACKEND_URL}/blog/blog?_id=${query.url}`)
+        // ${process.env.BACKEND_URL}
+        const blogRes = await axios.get(`/blog/blog?_id=${query.url}`)
         const blogData = blogRes.data
 
-        const postRes = await axios.get(`${process.env.BACKEND_URL}/blog/blogs`)
+        const postRes = await axios.get(`/blog/blogs`)
         const postData = postRes.data
 
         return { blog: blogData, postData: postData}
