@@ -27,7 +27,7 @@ class Blog extends Component {
         }
     }
     static async getInitialProps({ req }) {
-        const postRes = await fetch('http://localhost/blog/blogs', {
+        const postRes = await fetch(`${process.env.BACKEND_URL}/blog/blogs`, {
             method: 'get' ,
             headers: {
                 accept: 'application/json'
