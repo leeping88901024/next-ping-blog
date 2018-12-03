@@ -46,10 +46,10 @@ class BlogPost extends Component {
         })
         const postJson = await postRes.json() */
         const blogRes = await axios.get(`${process.env.BACKEND_URL}/blog/blog?_id=${query.url}`)
-        const { data: blogData } = blogRes
+        const blogData = blogRes.data
 
         const postRes = await axios.get(`${process.env.BACKEND_URL}/blog/blogs`)
-        const { data: postData } = postRes
+        const postData = postRes.data
 
         return { blog: blogData, postData: postData}
     }
