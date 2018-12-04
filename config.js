@@ -20,7 +20,8 @@ module.exports = {
   mtitle: '你好，昆明',
   msubTitle: 'Hello, Kun Ming',
   // mheaderImage: 'https://i.imgur.com/ebCJ61b.jpg',
-  mheaderImage: 'https://i.imgur.com/LztfDG3.jpg',
+  // https://i.imgur.com/sFZsiWe.jpg
+  mheaderImage: 'https://rehasense.com/wp-content/uploads/2015/07/facility-slider.jpg',
   mtitleVisible: true,
   msubTitleVisible: true,
   // blog-template-header image  // editor
