@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import fetch from 'isomorphic-unfetch'
 import chunk from 'lodash'
-import { Pagination } from 'antd'
+import { Pagination, LocaleProvider } from 'antd'
 import axios from 'axios'
+
+import zh_CN from 'antd/lib/locale-provider/zh_CN'
+import 'moment/locale/zh-cn'
 
 import Layout from '../components/Layout'
 import Header from '../components/Header'
@@ -86,12 +88,15 @@ class Blog extends Component {
                             ))}
                     </div>
                     {/* pagenation */}
-                    <Pagination 
-                      showQuickJumper 
-                      defaultPageSize={pageSize} // 每页一篇文章
-                      onShowSizeChange={this.onShowSizeChange} 
-                      onChange={this.handlePageChange}
-                      defaultCurrent={1} total={totalCount} />
+                    <LocaleProvider locale={zh_CN}>
+                        <Pagination 
+                        showQuickJumper
+                        style={{ marginBottom: 20}} 
+                        defaultPageSize={pageSize} // 每页一篇文章
+                        onShowSizeChange={this.onShowSizeChange} 
+                        onChange={this.handlePageChange}
+                        defaultCurrent={1} total={totalCount} />
+                    </LocaleProvider>
                     </div>
                     <div className="col-xl-2 col-lg-1 order-3" />
                     <ShareBox url='location.href' hasCommentBox={false} />
