@@ -24,9 +24,7 @@ module.exports = {
   mheaderImage: 'https://rehasense.com/wp-content/uploads/2015/07/facility-slider.jpg',
   mtitleVisible: true,
   msubTitleVisible: true,
-  // blog-template-header image  // editor
-  tmpblogimage1: 'https://i.imgur.com/gf1pKau.png',
-  tmpblogimage2: 'https://i.imgur.com/LztfDG3.jpg',
+  // editor
   gitRepository: 'https://github.com/leeping88901024/next-ping-blog',
   gitHome: 'https://github.com/leeping88901024',
   tmpheaderBkgrdColor: '#ededed',

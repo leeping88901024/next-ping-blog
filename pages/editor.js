@@ -53,7 +53,7 @@ const styles = theme => ({
     },
 });
 
-const { tmpblogimage2, tmpheaderBkgrdColor } = config
+const { tmpheaderBkgrdColor } = config
 
 class Editor extends React.Component {
     constructor (props) {
@@ -67,7 +67,7 @@ class Editor extends React.Component {
             content: '', // markdown content
             tags: '',
             headerBackgroundColor: tmpheaderBkgrdColor,
-            headerImageUri: tmpblogimage2
+            headerImageUri: ''
         };
         this.converter = new Showdown.Converter({
         tables: true,
