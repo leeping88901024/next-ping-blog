@@ -63,9 +63,9 @@ class Editor extends React.Component {
             visible: false,
             confirmLoading: false,
             displayColorPicker: false,
-            title: '第一篇博文',
+            title: '',
             content: '', // markdown content
-            tags: '随笔',
+            tags: '',
             headerBackgroundColor: tmpheaderBkgrdColor,
             headerImageUri: tmpblogimage2
         };
