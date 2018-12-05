@@ -15,7 +15,6 @@ router.get('/blogs',(req,res) => {
                 console.log(err)
                 return
             }
-            console.log(`The blog mount is : ${docs.length}`)
             res.send(docs)
         })
     })
