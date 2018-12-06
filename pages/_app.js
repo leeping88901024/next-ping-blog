@@ -1,12 +1,16 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import Head from 'next/head';
+import Router from 'next/router';
 import { MuiThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import JssProvider from 'react-jss/lib/JssProvider';
 import getPageContext from '../api/getPageContext';
 
 import config from '../config'
+
+// react-ga
+import { initGA, logPageView } from '../utils/analytics'
 
 class MyApp extends App {
   constructor(props) {
@@ -20,6 +24,10 @@ class MyApp extends App {
     if (jssStyles && jssStyles.parentNode) {
       jssStyles.parentNode.removeChild(jssStyles);
     }
+    // react-ga
+    initGA();
+    logPageView();
+    Router.router.events.on('routeChangeComplete', logPageView);
   }
 
   render() {

@@ -11,7 +11,7 @@ module.exports = {
   email: 'leeping88901024@gmail.com',
   iconUrl: 'https://i.imgur.com/JJryeCE.jpg',
   License: 'by',
-  url: '',
+  url: 'http://www.macdull.top',
   about: '/profile',
   // also repository link blog/header
   jueJinPostLink: 'https://github.com/leeping88901024/next-ping-blog', 
@@ -40,7 +40,7 @@ module.exports = {
   ],
   // pagination size/page
   pageSize: 2,
-  // Plugins
+  // Plugins - Google Analytics
   gaOptimizeId: 'GTM-WHP7SC5',
   gaTrackId: 'UA-84737574-3',
   // Navbar
