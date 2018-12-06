@@ -42,7 +42,7 @@ module.exports = {
   pageSize: 2,
   // Plugins - Google Analytics
   gaOptimizeId: 'GTM-WHP7SC5',
-  gaTrackId: 'UA-84737574-3',
+  gaTrackId: 'UA-130591707-1',
   // Navbar
   navbarList: [
     {
