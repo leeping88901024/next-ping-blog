@@ -9,6 +9,10 @@ var { dbstring } = require('../config')
 router.get('/blogs',(req,res) => {
     // res.send('there is blog post')
     MongoClient.connect(dbstring.uri, { useNewUrlParser: true }, (err, client) => {
+        if (err) {
+            console.log('An error occurred connecting to MongoDB:', err)
+            return
+        }
         var blogCollection = client.db('Blog').collection('blog')
         blogCollection.find({}).sort({ createDate: -1 }).toArray((err, docs) => {
             if (err) {
@@ -24,6 +28,10 @@ router.get('/blogs',(req,res) => {
 router.get('/blog', (req, res) => {
     var _id = objectId(req.query._id)
     MongoClient.connect(dbstring.uri, { useNewUrlParser: true }, (err, client) => {
+        if (err) {
+            console.log('An error occurred connecting to MongoDB:', err)
+            return
+        }
         var blogCollection = client.db('Blog').collection('blog')
         blogCollection.findOne({ _id: _id }, (err, doc) => {
             if (err) {
@@ -46,7 +54,7 @@ router.post('/create', (req, res) => {
     }
     MongoClient.connect(dbstring.uri, { useNewUrlParser: true }, (err, client) => {
         if (err) {
-            console.log(err)
+            console.log('An error occurred connecting to MongoDB:', err)
             return
         }
         var blogCollection = client.db('Blog').collection('blog')
