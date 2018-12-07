@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{1485:function(n,t,e){__NEXT_REGISTER_PAGE("/translation",function(){return n.exports=e(1486),{page:n.exports.default}})},1486:function(n,t,e){"use strict";e.r(t);var o=e(0),r=e.n(o);t.default=function(){return r.a.createElement("div",null,"这是我翻译文档的地方")}}},[[1485,1,0]]]);
