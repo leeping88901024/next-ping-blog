@@ -42,7 +42,7 @@ app.prepare()
 
     // test you should delete it 
     server.post('/api/security/token', (req,res) => {
-      console.log(req.data)
+      console.log(req.body)
     })
 
     // handle resource
