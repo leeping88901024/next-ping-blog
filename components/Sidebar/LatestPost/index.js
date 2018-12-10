@@ -12,6 +12,7 @@ const LatestPost = ({ posts }) => (
     {posts.map((post) => (
       <Link
         key={post.posturl}
+        prefetch
         href={post.posturl}
       >
         <a>{post.title} - {parseChineseDate(post.createDate)}</a>

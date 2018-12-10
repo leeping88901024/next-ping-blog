@@ -16,7 +16,7 @@ const imageStyle = (headerImage, color) => ({
 });
 
 const CardHeader = ({ url, image, backgroundColor }) => (
-  <Link href={url}>
+  <Link href={url} prefetch>
     <a><div className="wrapper" style={imageStyle(image, backgroundColor)} /></a>
   </Link>
 );
@@ -50,11 +50,11 @@ const Card = ({
               <span className="date">{date}</span>
               {finalTags.map(tag => <Tag name={tag} key={tag} />)}
             </div>
-            <Link href={newUrl}>
+            <Link href={newUrl} prefetch>
               <a><h4 className="title">{title}</h4></a>
             </Link>
             <div className="d-none d-md-block">{content}</div>
-            <Link href={newUrl}>
+            <Link href={newUrl} prefetch >
               <a>....继续阅读全文內容</a>
             </Link>
           </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import Router from 'next/router'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import NavItem from './NavItem/'
@@ -18,20 +18,14 @@ const NavbarClass = [
 const Navbar = () => (
   <nav id="m-navbar" className={`${NavbarClass.join(' ')} navbar-night`}>
     <div className="container">
-      <Link href='/'>
-        <a>
-          <button
+      <button
             type="button"
-            className="navbar-brand btn btn-default"
-            onClick={() => {
-              // Router.push('/')
-            }}
+            onClick={() => Router.push('/')}
+            className="navbar-brand btn"
           >
             <span className="brand-logo">Ping</span>
             &apos;s Blog
-          </button>
-        </a>
-      </Link>
+      </button>
       <button
         className="navbar-toggler"
         type="button"

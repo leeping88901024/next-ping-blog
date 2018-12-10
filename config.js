@@ -1,10 +1,6 @@
 module.exports = {
   title: 'Ping 的技术博客',
-  maxPostsInPage: 10,
   meta: {
-    description: 'Ping 技术博客，开发日常，以及遇到的坑',
-    keyword: 'ping, blog, JavaScript',
-    theme_color: '#384f7c',
     favicon: 'https://i.imgur.com/JJryeCE.jpg',
   },
   name: 'Ping',
@@ -19,8 +15,6 @@ module.exports = {
   // headers
   mtitle: '你好，昆明',
   msubTitle: 'Hello, Kun Ming',
-  // mheaderImage: 'https://i.imgur.com/ebCJ61b.jpg',
-  // https://i.imgur.com/sFZsiWe.jpg
   mheaderImage: 'https://rehasense.com/wp-content/uploads/2015/07/facility-slider.jpg',
   mtitleVisible: true,
   msubTitleVisible: true,
@@ -39,31 +33,18 @@ module.exports = {
     }
   ],
   // pagination size/page
-  pageSize: 2,
+  pageSize: 3,
   // Plugins - Google Analytics
   gaOptimizeId: 'GTM-WHP7SC5',
   gaTrackId: 'UA-130591707-1',
   // Navbar
   navbarList: [
     {
-      href: '/translation/',
-      title: '文档翻译',
-    },
-    {
       href: '/test/',
       title: '留言'
-    },
-    {
-      href: '/a/',
-      title: '测试Bug1'
     }
   ],
-  redirectors: [
-    {
-      fromPath: '/',
-      toPath: '/page/1/',
-    },
-  ],
+  // pluggins
   gitalk: {
     clientID: '106ab12fa69d9f235e1f',
     clientSecret: 'a1eda91e5225817427aab929917f87657b2192eb',
@@ -71,11 +52,6 @@ module.exports = {
     owner: 'leeping88901024',
     admin: ['leeping88901024'],
     distractionFreeMode: true,
-  },
-  stats: {
-    title: '過去三十日數據',
-    description: '過去三十日數據',
-    image: 'https://i.imgur.com/VjBWiSt.png',
   },
   // mongodb connect string
   dbstring: {

@@ -8,6 +8,7 @@ import Link from 'next/link';
 const NavItem = ({ url, name, list }) => {
   return (
     <Link
+      prefetch
       href={url}
     >
       <a className="nav-btn btn btn-link" >{name}</a>

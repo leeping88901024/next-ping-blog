@@ -76,7 +76,7 @@ class Blog extends Component {
                         {this.state.pagedPosts[this.state.currentPage].map(node => (
                             <Card
                                 title={node.title}
-                                date={parseChineseDate(node.createdDate)}
+                                date={parseChineseDate(node.createDate)}
                                 url={node._id}
                                 headerImage={node.headerImageUri}
                                 headerBackgroundColor={node.headerBackgroundColor || 'ededed'}
