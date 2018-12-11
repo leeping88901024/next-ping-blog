@@ -8,7 +8,7 @@ module.exports = {
   iconUrl: 'https://i.imgur.com/JJryeCE.jpg',
   License: 'by',
   url: 'http://www.macdull.top',
-  about: '/profile',
+  about: '/blog?url=5c0a9e594a589a08dc87ce89',
   // also repository link blog/header
   jueJinPostLink: 'https://github.com/leeping88901024/next-ping-blog', 
   jueJinLikeIconLink: 'https://img.shields.io/github/stars/leeping88901024/next-ping-blog.svg?style=social',
