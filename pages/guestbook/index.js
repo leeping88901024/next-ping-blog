@@ -45,14 +45,14 @@ class Guestbook extends Component {
     })
     return (
       <Layout>
-        <div className="row post order-2">
+        <div className="row order-2 guestbook">
           <Sidebar totalCount={totalCount} posts={posts} post />
           <div className="col-lg-6 col-md-12 col-sm-12 order-10 d-flex flex-column content">
             <h2>
               留言板
               <ShareBox url={''} />
             </h2>
-            <div id="gitalk-container" className="col-12" />
+            <div id="gitalk-container" className="col-sm-8 col-12 order-12" />
           </div>
         </div>
       </Layout>
