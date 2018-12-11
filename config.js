@@ -40,11 +40,11 @@ module.exports = {
   // Navbar
   navbarList: [
     {
-      href: '/tags/',
+      href: '/tags',
       title: '分类'
     },
     {
-      href: '/guestbook/',
+      href: '/guestbook',
       title: '留言板'
     },
     {
