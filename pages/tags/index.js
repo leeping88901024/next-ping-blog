@@ -192,7 +192,7 @@ class TagPage extends Component {
             <TagSession
               tag={tag}
               articles={tags[tag].filter((v, i, a) => a.indexOf(v) === i)}
-              isActive={decodeURI(location.hash) === `#${tag}`}
+              isActive={false}
               key={tag}
             />
           ))}
