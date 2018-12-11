@@ -40,11 +40,6 @@ app.prepare()
   
     server.use('/blog', blogRouter)
 
-    // test you should delete it 
-    server.post('/api/security/token', (req,res) => {
-      console.log(req.body)
-    })
-
     // handle resource
     server.get('*', (req, res) => {
       return handle(req, res)
