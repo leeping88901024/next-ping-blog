@@ -146,7 +146,7 @@ class TagPage extends Component {
 
   render() {
     const { showAllTags, tags } = this.state;
-    // const { data, location } = this.props;
+    const { location } = this.props;
     // const { header } = data;
 
     const rawTags = Object.keys(tags);
