@@ -45,7 +45,7 @@ class Guestbook extends Component {
     })
     return (
       <Layout>
-        <div className="row post guestbook">
+        <div className="row post order-2">
           <Sidebar totalCount={totalCount} posts={posts} post />
           <div className="col-lg-6 col-md-12 col-sm-12 order-10 d-flex flex-column content">
             <h2>
