@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 
 import './index.scss';
 
-import { parseChineseDate } from '../../../api/date'
-
 const LatestPost = ({ posts }) => (
   <div className="latest-post">
     <p>最新文章</p>
@@ -15,7 +13,7 @@ const LatestPost = ({ posts }) => (
         prefetch
         href={post.posturl}
       >
-        <a>{post.title} - {parseChineseDate(post.createDate)}</a>
+        <a>{post.title}</a>
       </Link>
     ))}
   </div>
