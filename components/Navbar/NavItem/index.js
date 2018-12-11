@@ -11,7 +11,7 @@ const NavItem = ({ url, name, list }) => {
       prefetch
       href={url}
     >
-      <a className="nav-btn btn btn-link" >{name}</a>
+      <a className="nav-btn btn " >{name}</a>
     </Link>
   );
 };
