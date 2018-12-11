@@ -15,7 +15,7 @@ module.exports = {
   // headers
   mtitle: '你好，昆明',
   msubTitle: 'Hello, Kun Ming',
-  mheaderImage: 'https://rehasense.com/wp-content/uploads/2015/07/facility-slider.jpg',
+  mheaderImage: 'https://i.imgur.com/qilDyyv.jpg',
   mtitleVisible: true,
   msubTitleVisible: true,
   // editor
