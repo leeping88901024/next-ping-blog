@@ -83,7 +83,7 @@ class BlogPost extends Component {
                     authorName={name}
                     authorImage={iconUrl}
                     // data
-                    subTitle={parseChineseDate(blog.createdDate)}
+                    subTitle={parseChineseDate(blog.createDate)}
                     jueJinLikeIconLink={jueJinLikeIconLink}
                     jueJinPostLink={jueJinPostLink}
                     />
