@@ -174,7 +174,7 @@ class TagPage extends Component {
                 所有标签
               </Button>
             </h2>
-
+            <hr/>
             <div
               style={{
                 ...style,
@@ -186,8 +186,9 @@ class TagPage extends Component {
                 <Tag name={item} count={tags[item].length} key={item} />
               ))}
             </div>
+            <hr/>
           </div>
-
+  
           {sortedTags.map(tag => (
             <TagSession
               tag={tag}
