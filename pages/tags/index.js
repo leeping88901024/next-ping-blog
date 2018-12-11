@@ -6,6 +6,8 @@ import Link from 'next/link'
 import Tag from '../../components/Tag'
 import ShareBox from '../../components/ShareBox'
 import { Button } from 'antd'
+import Layout from '../../components/Layout'
+
 const splitTag = (raw = '') => raw.split(', ')
 
 const parseDate = date => dayjs(date).format('YYYY/MM/DD')
@@ -147,42 +149,44 @@ class TagPage extends Component {
     const hotTags = !showAllTags ? rawTags.slice(0, 5) : rawTags;
 
     return (
-      <div className="row">
-        <div className={tagCenter}>
-          <h2 style={{ ...style, justifyContent: 'space-between' }}>
-            最热门标签
-            <Button
-              type="dashed"
-              onClick={() => this.toggleAllTags()}
+      <Layout>
+        <div className="row">
+          <div className={tagCenter}>
+            <h2 style={{ ...style, justifyContent: 'space-between' }}>
+              最热门标签
+              <Button
+                type="dashed"
+                onClick={() => this.toggleAllTags()}
+              >
+                所有标签
+              </Button>
+            </h2>
+
+            <div
+              style={{
+                ...style,
+                justifyContent: 'space-evenly',
+                flexWrap: 'wrap',
+              }}
             >
-              所有标签
-            </Button>
-          </h2>
-
-          <div
-            style={{
-              ...style,
-              justifyContent: 'space-evenly',
-              flexWrap: 'wrap',
-            }}
-          >
-            {hotTags.map(item => (
-              <Tag name={item} count={tags[item].length} key={item} />
-            ))}
+              {hotTags.map(item => (
+                <Tag name={item} count={tags[item].length} key={item} />
+              ))}
+            </div>
           </div>
+
+          {sortedTags.map(tag => (
+            <TagSession
+              tag={tag}
+              articles={tags[tag].filter((v, i, a) => a.indexOf(v) === i)}
+              isActive={decodeURI(location.hash) === `#${tag}`}
+              key={tag}
+            />
+          ))}
+
+          <ShareBox url={''} hasCommentBox={false} />
         </div>
-
-        {sortedTags.map(tag => (
-          <TagSession
-            tag={tag}
-            articles={tags[tag].filter((v, i, a) => a.indexOf(v) === i)}
-            isActive={decodeURI(location.hash) === `#${tag}`}
-            key={tag}
-          />
-        ))}
-
-        <ShareBox url={''} hasCommentBox={false} />
-      </div>
+      </Layout>
     );
   }
 }
