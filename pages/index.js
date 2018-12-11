@@ -29,6 +29,7 @@ class Blog extends Component {
             currentPage: 0
         }
     }
+    
     static async getInitialProps({ req }) {
         // ${process.env.BACKEND_URL}
         const postRes = await axios.get(`/blog/blogs`)

@@ -13,8 +13,8 @@ module.exports = {
   jueJinPostLink: 'https://github.com/leeping88901024/next-ping-blog', 
   jueJinLikeIconLink: 'https://img.shields.io/github/stars/leeping88901024/next-ping-blog.svg?style=social',
   // headers
-  mtitle: '你好，昆明',
-  msubTitle: 'Hello, Kun Ming',
+  mtitle: '你好，昆明。',
+  msubTitle: 'Hello, Kun Ming.',
   mheaderImage: 'https://i.imgur.com/qilDyyv.jpg',
   mtitleVisible: true,
   msubTitleVisible: true,
@@ -23,7 +23,7 @@ module.exports = {
   gitHome: 'https://github.com/leeping88901024',
   tmpheaderBkgrdColor: '#ededed',
   // Sidebar
-  wordings: ['这是一个简单的自我简绍'],
+  wordings: [`五百里滇池，奔来眼底，披襟岸帻，喜茫茫空阔无边。`],
   zhihuUsername: 'li-ping-60-30',
   githubUsername: 'leeping88901024',
   friends: [
@@ -40,8 +40,16 @@ module.exports = {
   // Navbar
   navbarList: [
     {
-      href: '/test/',
-      title: '留言'
+      href: '/tags/',
+      title: '分类'
+    },
+    {
+      href: '/guestbook/',
+      title: '留言板'
+    },
+    {
+      href: '/blog?url=5c0a9e594a589a08dc87ce89',
+      title: '关于作者'
     }
   ],
   // pluggins

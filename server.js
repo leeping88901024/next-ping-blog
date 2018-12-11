@@ -31,7 +31,7 @@ app.prepare()
     })
 
     // middleware
-
+  
     // setup the logger
     server.use(logger('common', { stream: accessLogStream }))
     server.use(bodyParser.json({ limit: '100mb', extended: true }))

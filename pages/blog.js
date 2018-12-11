@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import fetch from 'isomorphic-unfetch'
 import axios from 'axios'
 
 import TableOfContent from '../components/TableOfContent'
