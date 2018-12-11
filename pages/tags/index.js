@@ -7,11 +7,17 @@ import Tag from '../../components/Tag'
 import ShareBox from '../../components/ShareBox'
 import { Button } from 'antd'
 import Layout from '../../components/Layout'
+import Header from '../../components/Header'
+
+// config data
+import config from '../../config'
 
 const splitTag = (raw = '') => raw.split(', ')
 
 const parseDate = date => dayjs(date).format('YYYY/MM/DD')
 const tagCenter = 'col-12 col-md-10 col-lg-8 m-auto'
+
+const { msubTitle, mtitle, mtitleVisible, msubTitleVisible, mheaderImage } = config
 
 const getTag = (item) => {
   const { tags, createDate, title,_id } = item;
@@ -151,11 +157,18 @@ class TagPage extends Component {
     return (
       <Layout>
         <div className="row">
+          <Header
+            img={mheaderImage}
+            title='文章分类'
+            titleVisible={mtitleVisible}
+            subTitle='（按标签分类）'
+            subTitleVisible={msubTitleVisible}
+          />
           <div className={tagCenter}>
             <h2 style={{ ...style, justifyContent: 'space-between' }}>
               最热门标签
               <Button
-                type="dashed"
+                type="primary"
                 onClick={() => this.toggleAllTags()}
               >
                 所有标签

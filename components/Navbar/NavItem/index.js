@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './index.scss';
 import Link from 'next/link';
 
-
+const isBrowser = () => typeof window !== 'undefined'
 
 const NavItem = ({ url, name, list }) => {
   return (
@@ -11,7 +11,7 @@ const NavItem = ({ url, name, list }) => {
       prefetch
       href={url}
     >
-      <a className="nav-btn btn " >{name}</a>
+      <a className="nav-btn" >{name}</a>
     </Link>
   );
 };

@@ -4,5 +4,9 @@
   @extend %hover;
   .navbar-nav & {
     color: $light-blue;
-  }
+  };
+  text-align: center;
+  @media only screen and (min-width: 1029px) {
+    margin-right: 20px;
+}
 }
