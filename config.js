@@ -40,6 +40,10 @@ module.exports = {
   // Navbar
   navbarList: [
     {
+      href: '/',
+      title: '首页'
+    },
+    {
       href: '/tags',
       title: '分类'
     },
