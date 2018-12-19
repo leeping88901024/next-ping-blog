@@ -1,11 +1,11 @@
 module.exports = {
   title: 'Ping 的技术博客',
   meta: {
-    favicon: 'https://i.imgur.com/JJryeCE.jpg',
+    favicon: 'https://i.imgur.com/yiFB7Vh.jpg',
   },
   name: 'Ping',
   email: 'leeping88901024@gmail.com',
-  iconUrl: 'https://i.imgur.com/JJryeCE.jpg',
+  iconUrl: 'https://i.imgur.com/yiFB7Vh.jpg',
   License: 'by',
   url: 'http://www.macdull.top',
   about: '/blog?url=5c0a9e594a589a08dc87ce89',
