@@ -23,7 +23,7 @@ module.exports = {
   gitHome: 'https://github.com/leeping88901024',
   tmpheaderBkgrdColor: '#ededed',
   // Sidebar
-  wordings: [`五百里滇池，奔来眼底，披襟岸帻，喜茫茫空阔无边。`],
+  wordings: [`伟大的心像大海一样，永远不会冰封。`],
   zhihuUsername: 'li-ping-60-30',
   githubUsername: 'leeping88901024',
   friends: [
