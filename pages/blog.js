@@ -26,7 +26,7 @@ import '../styles/blog-post.scss'
 import 'gitalk/dist/gitalk.css'
 const bgWhite = { padding: '10px 15px', background: 'white' }
 
-const { name, gitRepository, gitHome, iconUrl, jueJinPostLink, jueJinLikeIconLink, gitalk } = config
+const { name, gitRepository, gitHome, iconUrl, jueJinPostLink, jueJinLikeIconLink, gitalk, defaultheaderImageUri } = config
 
 const title = '这是标题'
 var _id = ''
@@ -76,7 +76,7 @@ class BlogPost extends Component {
             <Layout>
                 <div className="row post order-2">
                     <Header
-                    img={blog.headerImageUri}
+                    img={blog.headerImageUri || defaultheaderImageUri}
                     title={blog.title}
                     tags={blog.tags}
                     authorName={name}

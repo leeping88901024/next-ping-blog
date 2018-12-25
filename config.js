@@ -22,6 +22,7 @@ module.exports = {
   gitRepository: 'https://github.com/leeping88901024/next-ping-blog',
   gitHome: 'https://github.com/leeping88901024',
   tmpheaderBkgrdColor: '#ededed',
+  defaultheaderImageUri: 'https://i.imgur.com/oLJNTdS.jpg',
   // Sidebar
   wordings: [`伟大的心像大海一样，永远不会冰封。`],
   zhihuUsername: 'li-ping-60-30',
