@@ -1,11 +1,11 @@
 module.exports = {
   title: 'Ping 的技术博客',
   meta: {
-    favicon: 'https://wt.sinaimg.cn/thumb300/6124ef8ejw1e464j7vxqxj20hs0vkgmr.jpg?tags=%5B%5D',
+    favicon: 'https://i.imgur.com/2B9jRyn.jpg',
   },
   name: 'Ping',
   email: 'leeping88901024@gmail.com',
-  iconUrl: 'https://wt.sinaimg.cn/thumb300/6124ef8ejw1e464j7vxqxj20hs0vkgmr.jpg?tags=%5B%5D',
+  iconUrl: 'https://i.imgur.com/2B9jRyn.jpg',
   License: 'by',
   url: 'http://www.macdull.top',
   about: '/blog?url=5c0a9e594a589a08dc87ce89',
