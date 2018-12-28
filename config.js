@@ -24,7 +24,7 @@ module.exports = {
   tmpheaderBkgrdColor: '#ededed',
   defaultheaderImageUri: 'https://i.imgur.com/oLJNTdS.jpg',
   // Sidebar
-  wordings: [`伟大的心像大海一样，永远不会冰封。`],
+  wordings: [`人生就像玻璃窗上的苍蝇，前途一片光明，却找不到出路。`],
   zhihuUsername: 'li-ping-60-30',
   githubUsername: 'leeping88901024',
   friends: [
