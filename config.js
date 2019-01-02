@@ -24,7 +24,7 @@ module.exports = {
   tmpheaderBkgrdColor: '#ededed',
   defaultheaderImageUri: 'https://i.imgur.com/oLJNTdS.jpg',
   // Sidebar
-  wordings: [`计算机领域有点像是沉积的岩石，每个人在一座山里贡献了其中薄薄的一层，使山变得更加高耸。用户只是站在山顶，只有带着 X 光，你才能看到山里面是什么样子。`],
+  wordings: [`你们的时间有限，所以不要把它浪费在过其他人的生活。最重要的是，你要有勇气跟随你的内心和直觉。某种程度上，它们已经知道你真正想要成为什么样子。其他所有事情都是次要的。`],
   zhihuUsername: 'li-ping-60-30',
   githubUsername: 'leeping88901024',
   friends: [
