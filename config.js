@@ -24,7 +24,7 @@ module.exports = {
   tmpheaderBkgrdColor: '#ededed',
   defaultheaderImageUri: 'https://i.imgur.com/oLJNTdS.jpg',
   // Sidebar
-  wordings: [`人生就像玻璃窗上的苍蝇，前途一片光明，却找不到出路。`],
+  wordings: [`计算机领域有点像是沉积的岩石，每个人在一座山里贡献了其中薄薄的一层，使山变得更加高耸。用户只是站在山顶，只有带着 X 光，你才能看到山里面是什么样子。`],
   zhihuUsername: 'li-ping-60-30',
   githubUsername: 'leeping88901024',
   friends: [
