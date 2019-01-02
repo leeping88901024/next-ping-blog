@@ -28,10 +28,7 @@ module.exports = {
   zhihuUsername: 'li-ping-60-30',
   githubUsername: 'leeping88901024',
   friends: [
-    {
-      href: 'https://calpa.me',
-      title: 'Calpa'
-    }
+    
   ],
   // pagination size/page
   pageSize: 3,
