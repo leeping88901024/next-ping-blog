@@ -15,7 +15,7 @@ module.exports = {
   // headers
   mtitle: '你好，昆明。',
   msubTitle: 'Hello, Kun Ming.',
-  mheaderImage: 'https://i.imgur.com/yBt4oU2.jpg',
+  mheaderImage: 'https://i.imgur.com/f74f4ov.jpg',
   mtitleVisible: true,
   msubTitleVisible: true,
   // editor
