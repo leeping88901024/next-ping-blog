@@ -22,7 +22,7 @@ module.exports = {
   gitRepository: 'https://github.com/leeping88901024/next-ping-blog',
   gitHome: 'https://github.com/leeping88901024',
   tmpheaderBkgrdColor: '#ededed',
-  defaultheaderImageUri: 'https://i.imgur.com/oLJNTdS.jpg',
+  defaultheaderImageUri: 'https://i.imgur.com/nIZniDa.jpg',
   // Sidebar
   wordings: [`在软件开发中，技术变化如此之快，你花费了大量时间学习技术和工具，一旦这些技术被取代，你的知识将变得毫无价值，因为它们大部分都是实施的细节。`],
   zhihuUsername: 'li-ping-60-30',
