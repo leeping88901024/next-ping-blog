@@ -21,11 +21,6 @@ const Footer = () => (
             .&nbsp;Hosted on&nbsp;
             <ExternalLink href="https://www.aliyun.com/" title="Aliyun" />
             <br />
-            The code is reference on &nbsp;
-            <ExternalLink
-              href="https://github.com/calpa/gatsby-starter-calpa-blog"
-              title="calpa/gatsby-starter-calpa-blog"
-            />
           </p>
           <p className="copyright">
             Copyright&nbsp;
